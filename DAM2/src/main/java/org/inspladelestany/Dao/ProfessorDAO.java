@@ -1,11 +1,10 @@
 package org.inspladelestany.Dao;
 
 import org.inspladelestany.Models.Professor;
-import org.inspladelestany.Models.Usuari;
 
 import java.util.List;
 
-public interface UsuariDAO {
+public interface ProfessorDAO {
     void afegirProfessor(Professor professor);
     void editarProfessor(Professor professor);
     void deleteDam2(int id);

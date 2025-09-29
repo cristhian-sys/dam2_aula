@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class Menu {
 
-    static void menuopcions(Scanner scanner, int opc) {
+    //Constructor
+    public Menu() {}
+
+    public void menuopcions(Scanner scanner, int opc) {
         System.out.println("============MENU==============");
         System.out.println("1- ALTA");
         System.out.println("2- LlISTA");
