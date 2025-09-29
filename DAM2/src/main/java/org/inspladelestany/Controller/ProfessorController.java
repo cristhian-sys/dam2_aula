@@ -1,6 +1,5 @@
 package org.inspladelestany.Controller;
 
-
 import org.inspladelestany.Dao.ProfessorDAO;
 import org.inspladelestany.Views.ProfessorView;
 

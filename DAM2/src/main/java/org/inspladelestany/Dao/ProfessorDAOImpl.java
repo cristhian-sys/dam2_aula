@@ -5,10 +5,24 @@ import org.inspladelestany.Models.Professor;
 import java.util.List;
 
 public class ProfessorDAOImpl implements ProfessorDAO{
-    void afegirProfessor(Professor professor);
-    void editarProfessor(Professor professor);
-    void deleteDam2(int id);
-    void updateDam2(Professor professor);
-    List<Professor> readDam2 ();
 
+    @Override
+    public void addDam2(Professor professor) {
+
+    }
+
+    @Override
+    public void updateDam2(Professor professor) {
+
+    }
+
+    @Override
+    public void deleteDam2(int id) {
+
+    }
+
+    @Override
+    public List<Professor> readDam2() {
+        return List.of();
+    }
 }
