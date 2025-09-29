@@ -1,25 +1,14 @@
 package org.inspladelestany.Dao;
 
+import org.inspladelestany.Models.Professor;
+
 import java.util.List;
 
-public class UsuariDAOImpl implements UsuariDAO{
-    @Override
-    public void afegirUsuari(Usuari usuari) {
+public class ProfessorDAOImpl implements ProfessorDAO{
+    void afegirProfessor(Professor professor);
+    void editarProfessor(Professor professor);
+    void deleteDam2(int id);
+    void updateDam2(Professor professor);
+    List<Professor> readDam2 ();
 
-    }
-
-    @Override
-    public void editarUsuari(Usuari usuari) {
-
-    }
-
-    @Override
-    public void eliminarUsuari(Usuari usuari) {
-
-    }
-
-    @Override
-    public List<Usuari> llistarUsuaris() {
-        return List.of();
-    }
 }
