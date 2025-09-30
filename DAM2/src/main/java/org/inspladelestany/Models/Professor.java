@@ -6,6 +6,10 @@ public class Professor{
     private String cognom;
 
     //Constructor
+    public Professor(String nom, String cognom) {
+        this.nom = nom;
+        this.cognom = cognom;
+    }
 
     /**
      *
