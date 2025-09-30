@@ -8,7 +8,6 @@ import java.util.List;
 
 public class ProfessorDAOImpl implements ProfessorDAO {
     private Connection con;
-
     public ProfessorDAOImpl(Connection con) {
         this.con = con;
     }
