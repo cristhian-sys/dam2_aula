@@ -1,7 +1,6 @@
 package org.inspladelestany.Views;
 
 import org.inspladelestany.Models.Professor;
-import org.inspladelestany.Utils.Menu;
 
 import java.util.Scanner;
 
@@ -9,6 +8,8 @@ public class ProfessorView {
     private static final Scanner scanner = new Scanner(System.in);
 
     //Methods
+
+
     public Professor demanarDadesProfessor(){
         System.out.println("Introdueix el teu nom");
         String nom = scanner.nextLine();

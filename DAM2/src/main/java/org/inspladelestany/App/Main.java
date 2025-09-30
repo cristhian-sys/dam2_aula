@@ -7,14 +7,17 @@ import org.inspladelestany.Dao.ModulProDAOImpl;
 import org.inspladelestany.Dao.ProfessorDAO;
 import org.inspladelestany.Dao.ProfessorDAOImpl;
 import org.inspladelestany.Utils.GestorConnexioBD;
+import org.inspladelestany.Utils.Menu;
 import org.inspladelestany.Views.ModulView;
 import org.inspladelestany.Views.ProfessorView;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Main {
     private static GestorConnexioBD gestorBD = new GestorConnexioBD();
+    private static Menu menu = new Menu();
 
     private static ProfessorView professorView = new ProfessorView();
     private static ProfessorDAO professorDAO = new ProfessorDAOImpl();
@@ -27,6 +30,7 @@ public class Main {
     public static void main(String[] args) {
     comprobarAccesBD();
 
+    int option = askOptionMenu();
 
     }
 
@@ -37,12 +41,23 @@ public class Main {
         try {
             // Establecer conexión
             Connection connection = gestorBD.obtenirConnexio();
-            System.out.println("Conexión exitosa a MySQL");
+            System.out.println("Conexión exitosa a Base de Dades!");
 
             // Cerrar conexión
             connection.close();
         } catch (SQLException e) {
             System.out.println("Error al conectar: " + e.getMessage());
         }
+    }
+
+    private static Integer askOptionMenu(){
+        Scanner scanner = new Scanner(System.in);
+        menu.menuOpcions();
+
+        System.out.print("Introdueix la opció: ");
+        int opc = Integer.parseInt(scanner.nextLine());
+
+        return opc;
+
     }
 }
