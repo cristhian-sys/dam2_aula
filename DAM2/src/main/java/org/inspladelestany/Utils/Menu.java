@@ -7,7 +7,7 @@ public class Menu {
     //Constructor
     public Menu() {}
 
-    public void menuopcions() {
+    public void menuosecu() {
         System.out.println("============MENU==============");
         System.out.println("1- ALTA");
         System.out.println("2- LlISTA");
@@ -17,7 +17,7 @@ public class Menu {
 
     }
 
-    public void munuModulsProfe(){
+    public void munuprincipla(){
         System.out.println("============MENU==============");
         System.out.println("1- Professor");
         System.out.println("2- ModulsProfessors");
