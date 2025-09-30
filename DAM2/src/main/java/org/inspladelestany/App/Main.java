@@ -16,24 +16,24 @@ import java.sql.SQLException;
 
 public class Main {
     public static GestorConnexioBD gestordb = new GestorConnexioBD();
+    static Connection connection = null;
     ProfessorView professorView = new ProfessorView();
-    ProfessorDAO professorDAO = new ProfessorDAOImpl();
+    ProfessorDAO professorDAO = new ProfessorDAOImpl((java.sql.Connection) connection);
     ProfessorController profController = new ProfessorController(professorView,professorDAO);
 
     ModulView modulView = new ModulView();
-    ModulProDAO modulProDAO = new ModulProDAOImpl();
+    ModulProDAO modulProDAO = new ModulProDAOImpl((java.sql.Connection) connection);
     ModulController modulController = new ModulController(modulView,modulProDAO);
-
-
 
     public static void main(String[] args) {
 
-    //    try {
-    //        Connection connection = (Connection) gestordb.obtenirConnexio();
-    //    } catch (SQLException e) {
-    //        //throw new RuntimeException(e);
-    //        System.out.println("Error a la connexió de la base de dades!");
-    //    }
+        try {
+            connection = (Connection) gestordb.obtenirConnexio();
+            System.out.println("Connexió correcte!");
+        } catch (SQLException e) {
+            //throw new RuntimeException(e);
+            System.out.println("Error a la connexió de la base de dades!");
+        }
 
 
 

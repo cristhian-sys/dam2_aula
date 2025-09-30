@@ -18,6 +18,10 @@ public class ModulProfessional {
         this.id_professors = id_professors;
     }
 
+    public ModulProfessional(String nom){
+        this.nom = nom;
+    }
+
     //Getters & Setters
     public int getId() {return id;}
     public void setId(int id) { this.id = id;}

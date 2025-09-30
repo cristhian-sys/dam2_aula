@@ -6,7 +6,7 @@ import org.inspladelestany.Utils.Menu;
 import java.util.Scanner;
 
 public class ProfessorView {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     //Constructor
     public ProfessorView() {
@@ -21,5 +21,12 @@ public class ProfessorView {
         String cognom = scanner.nextLine();
 
         return new Professor(nom,cognom);
+    }
+
+    public void mostrarDetallsProfessor(Professor prof){
+        System.out.println("Detalls del Professsor:");
+        System.out.println("id: " + prof.getId());
+        System.out.println("Nom: " + prof.getNom());
+        System.out.println("Cognom: "+ prof.getCognom());
     }
 }
