@@ -1,6 +1,5 @@
 package org.inspladelestany.Views;
 
-import jdk.jshell.execution.Util;
 import org.inspladelestany.Models.Professor;
 import org.inspladelestany.Utils.Menu;
 
@@ -9,16 +8,7 @@ import java.util.Scanner;
 public class ProfessorView {
     private static final Scanner scanner = new Scanner(System.in);
 
-    //Constructor
-    public ProfessorView() {
-    }
-
     //Methods
-
-    public Integer opcmenu(Scanner scanner,int opc){
-        System.out.println("Elige una opc: ");
-        return opc;
-    }
     public Professor demanarDadesProfessor(){
         System.out.println("Introdueix el teu nom");
         String nom = scanner.nextLine();

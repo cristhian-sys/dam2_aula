@@ -8,10 +8,6 @@ import java.util.Scanner;
 public class ModulView {
     private static final Scanner scanner = new Scanner(System.in);
 
-    //Constructor
-    public ModulView() {
-    }
-
     //Methods
     public ModulProfessional demanarDadesModul(){
         System.out.println("Introdueix el nom del modul: ");

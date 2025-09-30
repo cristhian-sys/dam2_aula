@@ -12,5 +12,7 @@ public class ModulController {
         this.modulView = modulView;
         this.modulController = modulController;
     }
+
+    //Methodsz
 }
 

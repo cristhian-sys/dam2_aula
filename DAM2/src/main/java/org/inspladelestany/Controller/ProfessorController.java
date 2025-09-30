@@ -12,4 +12,6 @@ public class ProfessorController {
         this.professorView = professorView;
         this.professorDAO = professorDAO;
     }
+
+    //Methods
 }

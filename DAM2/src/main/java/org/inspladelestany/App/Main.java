@@ -15,21 +15,24 @@ import java.sql.SQLException;
 
 public class Main {
     private static GestorConnexioBD gestorBD = new GestorConnexioBD();
-    ProfessorView professorView = new ProfessorView();
-    ProfessorDAO professorDAO = new ProfessorDAOImpl();
-    ProfessorController profController = new ProfessorController(professorView, professorDAO);
 
-    ModulView modelView = new ModulView();
-    ModulProDAO modulDao = new ModulProDAOImpl();
-    ModulController modulController = new ModulController(modelView, modulDao);
+    private static ProfessorView professorView = new ProfessorView();
+    private static ProfessorDAO professorDAO = new ProfessorDAOImpl();
+    private static ProfessorController profController = new ProfessorController(professorView, professorDAO);
+
+    private static ModulView modelView = new ModulView();
+    private static ModulProDAO modulDao = new ModulProDAOImpl();
+    private static ModulController modulController = new ModulController(modelView, modulDao);
 
     public static void main(String[] args) {
     comprobarAccesBD();
 
 
-
     }
 
+    /**Comprovar la conexió a la Base de Dades
+     *
+     */
     public static void comprobarAccesBD(){
         try {
             // Establecer conexión

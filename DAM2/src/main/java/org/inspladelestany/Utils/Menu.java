@@ -4,10 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    //Constructor
-    public Menu() {}
-
-    public void menuoSecu() {
+    public void menuOpcions() {
         System.out.println("============MENU==============");
         System.out.println("1- ALTA");
         System.out.println("2- LlISTA");
@@ -17,7 +14,7 @@ public class Menu {
 
     }
 
-    public void munuPrinsipla(){
+    public void menuPrincipal(){
         System.out.println("============MENU==============");
         System.out.println("1- Professor");
         System.out.println("2- ModulsProfessors");
