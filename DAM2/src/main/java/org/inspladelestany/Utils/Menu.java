@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Menu {
 
     public void menuOpcions() {
-        System.out.println("============MENU==============");
+        System.out.println("\n============MENU==============");
         System.out.println("1 - ALTA");
         System.out.println("2 - LlISTA");
         System.out.println("3 - Actualizar");

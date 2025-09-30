@@ -37,7 +37,7 @@ public class ProfessorView {
 
     public void mostrarDetallsProfessor(Professor prof) {
         System.out.println("Detalls del Professsor:");
-        System.out.println("id: " + prof.getId());
+        System.out.println("Id: " + prof.getId());
         System.out.println("Nom: " + prof.getNom());
         System.out.println("Cognom: " + prof.getCognom());
     }
