@@ -13,6 +13,6 @@ public class ModulController {
         this.modulController = modulController;
     }
 
-    //Methodsz
+    //Methods
 }
 

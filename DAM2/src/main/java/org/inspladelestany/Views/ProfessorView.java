@@ -10,17 +10,18 @@ public class ProfessorView {
     private static  Menu menu;
 
     //Methods
-    public Integer menuOpc(int opc) {
+    public Integer menuOpc() {
         menu.menuPrincipal();
         System.out.println("Elige una opc: ");
-        opc = Integer.parseInt(scanner.nextLine());
+        int opc = Integer.parseInt(scanner.nextLine());
         return opc;
     }
 
-    public Integer menuSecuOpc(int opc) {
+    public Integer menuSecuOpc() {
         menu.menuOpcions();
         System.out.println("Elige una opc: ");
-        opc = Integer.parseInt(scanner.nextLine());
+        int opc = Integer.parseInt(scanner.nextLine());
+
         return opc;
     }
 
@@ -40,4 +41,5 @@ public class ProfessorView {
         System.out.println("Nom: " + prof.getNom());
         System.out.println("Cognom: " + prof.getCognom());
     }
+
 }

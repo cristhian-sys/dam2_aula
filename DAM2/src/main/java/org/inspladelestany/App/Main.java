@@ -28,9 +28,31 @@ public class Main {
     private static ModulController modulController = new ModulController(modelView, modulDao);
 
     public static void main(String[] args) {
-    comprobarAccesBD();
+        comprobarAccesBD();
 
-    int option = askOptionMenu();
+        int option;
+        do {
+            option = askOptionMenu();
+
+            switch (option){
+                case 1:
+                    System.out.println("Menu professores");
+                    break;
+
+                case 2:
+                    System.out.println("Menu Modul");
+                    break;
+
+                case 0:
+                    System.out.println("Adeu!");
+                    break;
+
+                default:
+                    System.out.println("Opció no valida!");
+                    break;
+            }
+
+        } while (!(option == 0));
 
     }
 
@@ -52,7 +74,7 @@ public class Main {
 
     private static Integer askOptionMenu(){
         Scanner scanner = new Scanner(System.in);
-        menu.menuOpcions();
+        menu.menuPrincipal();
 
         System.out.print("Introdueix la opció: ");
         int opc = Integer.parseInt(scanner.nextLine());
