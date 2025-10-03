@@ -31,4 +31,8 @@ public class Professor{
     public String getCognom() {return cognom;}
     public void setCognom(String cognom) {this.cognom = cognom;}
 
+    @Override
+    public String toString() {
+        return "Professor{" + ", nom='" + nom + '\'' + ", cognom='" + cognom + '\'' + '}';
+    }
 }
