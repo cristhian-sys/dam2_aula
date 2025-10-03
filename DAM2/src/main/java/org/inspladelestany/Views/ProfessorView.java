@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ProfessorView {
     private static final Scanner scanner = new Scanner(System.in);
-    private static  Menu menu;
+    private static Menu menu;
 
     //Methods
     public Integer menuOpc() {
@@ -42,4 +42,16 @@ public class ProfessorView {
         System.out.println("Cognom: " + prof.getCognom());
     }
 
+    public Integer demanaId() {
+        int id = 0;
+        try {
+            System.out.println("Escribe una ID: ");
+            id = Integer.parseInt(scanner.nextLine());
+
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return id;
+
+    }
 }
