@@ -30,6 +30,8 @@ public class ProfessorController {
                     break;
 
                 default:
+                    System.out.println("Opció no valida!");
+                    break;
             }
         }
 
