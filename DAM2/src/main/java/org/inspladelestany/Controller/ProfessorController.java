@@ -14,4 +14,9 @@ public class ProfessorController {
     }
 
     //Methods
+    public void menu(){
+        
+        int option = professorView.menuSecuOpc();
+
+    }
 }
