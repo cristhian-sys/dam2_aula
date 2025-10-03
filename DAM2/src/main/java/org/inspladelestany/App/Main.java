@@ -36,7 +36,7 @@ public class Main {
 
             switch (option){
                 case 1:
-                    System.out.println("Menu professores");
+                    profController.mostrarMenuProfessor();
                     break;
 
                 case 2:
