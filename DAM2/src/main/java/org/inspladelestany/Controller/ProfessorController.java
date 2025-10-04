@@ -62,7 +62,7 @@ public class ProfessorController {
 
     private void editarProfessor() {
         Professor p = professorView.demanarDadesProfessor();
-
+        
         professorDAO.updateDam2(p);
         System.out.printf("Professor %s s'ha actualitzat!", p.getNom());
     }
