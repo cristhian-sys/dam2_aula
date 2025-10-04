@@ -16,16 +16,16 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    private static GestorConnexioBD gestorBD = new GestorConnexioBD();
-    private static Menu menu = new Menu();
+    private static final GestorConnexioBD gestorBD = new GestorConnexioBD();
+    private static final Menu menu = new Menu();
 
-    private static ProfessorView professorView = new ProfessorView();
-    private static ProfessorDAO professorDAO = new ProfessorDAOImpl();
-    private static ProfessorController profController = new ProfessorController(professorView, professorDAO);
+    private static final ProfessorView professorView = new ProfessorView();
+    private static final ProfessorDAO professorDAO = new ProfessorDAOImpl();
+    private static final ProfessorController profController = new ProfessorController(professorView, professorDAO);
 
-    private static ModulView modelView = new ModulView();
-    private static ModulProDAO modulDao = new ModulProDAOImpl();
-    private static ModulController modulController = new ModulController(modelView, modulDao);
+    private static final ModulView modelView = new ModulView();
+    private static final ModulProDAO modulDao = new ModulProDAOImpl();
+    private static final ModulController modulController = new ModulController(modelView, modulDao);
 
     public static void main(String[] args) {
         comprobarAccesBD();

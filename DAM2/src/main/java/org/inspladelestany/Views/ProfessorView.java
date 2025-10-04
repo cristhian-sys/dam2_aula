@@ -1,5 +1,6 @@
 package org.inspladelestany.Views;
 
+import com.mysql.cj.conf.ConnectionPropertiesTransform;
 import org.inspladelestany.Models.Professor;
 import org.inspladelestany.Utils.Menu;
 import java.util.List;
@@ -19,13 +20,20 @@ public class ProfessorView {
     }
 
     public Professor demanarDadesProfessor() {
-        System.out.println("Introdueix el nom: ");
+        System.out.print("Introdueix el nom: ");
         String nom = scanner.nextLine();
 
-        System.out.println("Introdueix el cognom: ");
+        System.out.print("Introdueix el cognom: ");
         String cognom = scanner.nextLine();
 
         return new Professor(nom, cognom);
+    }
+
+    public int idProfessor() {
+        System.out.print("Introdueix la ID del professor que vols eliminar:");
+        int option = Integer.parseInt(scanner.nextLine());
+
+        return option;
     }
 
     public void mostrarLlistaProfessors(List<Professor> professors) {

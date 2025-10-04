@@ -33,6 +33,6 @@ public class Professor{
 
     @Override
     public String toString() {
-        return "Professor{" + ", nom='" + nom + '\'' + ", cognom='" + cognom + '\'' + '}';
+        return "[ " + "Id: " + id + " Nom: " + nom + "Cognom: " + cognom + " ]";
     }
 }
