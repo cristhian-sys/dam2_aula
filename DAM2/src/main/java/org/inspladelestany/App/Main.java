@@ -76,10 +76,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         menu.menuPrincipal();
 
-        System.out.print("Introdueix la opció: ");
-        int opc = Integer.parseInt(scanner.nextLine());
+        int option = -1;
+        boolean ok = false;
 
-        return opc;
+        do {
+            System.out.print("Introdueix la opció: ");
+            if (scanner.hasNextInt()) {
+                option = scanner.nextInt();
+                ok = true;
 
+            } else {
+                System.out.println("Entrada invàlida. Heu d'introduir un nombre enter.");
+                scanner.next(); // descarta la entrada incorrecta
+            }
+        } while (!ok);
+
+        return option;
     }
 }

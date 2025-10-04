@@ -18,10 +18,11 @@ public class ModulController {
     //Methods
     public void mostrarMenuModul(){
 
-        int option = modulView.menuSecuOpc();
-
         boolean ok = false;
+
         do {
+            int option = modulView.menuSecuOpc();
+
             switch (option){
                 case 1:
                     altaModul();
@@ -39,6 +40,8 @@ public class ModulController {
                     eliminarModul();
                     ok = true;
                     break;
+                case 0:
+                    return;
 
                 default:
                     System.out.println("Opció no valida!");
@@ -52,7 +55,6 @@ public class ModulController {
         ModulProfessional m = modulView.demanarDadesModul();
 
         modulDAO.addDam2(m);
-        System.out.println("Modul creat correctament!");
     }
 
     private void llistarModul() {

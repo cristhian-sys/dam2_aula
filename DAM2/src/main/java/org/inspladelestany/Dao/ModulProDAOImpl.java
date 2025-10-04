@@ -13,7 +13,7 @@ public class ModulProDAOImpl implements ModulProDAO {
     @Override
     public void addDam2(ModulProfessional modul) {
         try (Connection con = gestorBD.obtenirConnexio();
-                PreparedStatement stmt = con.prepareStatement("INSERT INTO ModulsProfessionals ( nom) VALUES (  ?)")) {
+                PreparedStatement stmt = con.prepareStatement("INSERT INTO modulsprofessionals ( nom) VALUES (  ?)")) {
             stmt.setString(1, modul.getNom());
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -24,7 +24,7 @@ public class ModulProDAOImpl implements ModulProDAO {
     @Override
     public void deleteDam2(Integer id) {
         try (Connection con = gestorBD.obtenirConnexio();
-                PreparedStatement stmt = con.prepareStatement("DELETE FROM ModulsProfessionals  WHERE id = ?")) {
+                PreparedStatement stmt = con.prepareStatement("DELETE FROM modulsprofessionals  WHERE id = ?")) {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -36,7 +36,7 @@ public class ModulProDAOImpl implements ModulProDAO {
     @Override
     public void updateDam2(ModulProfessional modul) {
         try (Connection con = gestorBD.obtenirConnexio();
-                PreparedStatement stmt = con.prepareStatement("UPDATE ModulsProfessionals SET nom = ?")) {
+                PreparedStatement stmt = con.prepareStatement("UPDATE modulsprofessionals SET nom = ?")) {
             stmt.setString(1, modul.getNom());
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -49,9 +49,9 @@ public class ModulProDAOImpl implements ModulProDAO {
         List<ModulProfessional> listModul = new ArrayList<>();
         try (Connection con = gestorBD.obtenirConnexio();
                 Statement stmt = con.createStatement()) {
-            ResultSet rs = stmt.executeQuery("SELECT * FROM ModulsProfessionals )");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM modulsprofessionals");
             while (rs.next()) {
-                listModul.add(new ModulProfessional(rs.getInt("id"), rs.getString("nom"), rs.getInt("id_professors")));
+                listModul.add(new ModulProfessional(rs.getInt("id"), rs.getString("nom"), rs.getInt("id_professor")));
             }
         } catch (Exception e) {
             e.getMessage();

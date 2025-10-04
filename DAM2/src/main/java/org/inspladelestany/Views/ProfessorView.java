@@ -7,18 +7,33 @@ import java.util.Scanner;
 
 public class ProfessorView {
     private static final Scanner scanner = new Scanner(System.in);
-    private static Menu menu;
+    private static final Menu menu = new Menu();
 
     //Methods
     public Integer menuSecuOpc() {
         menu.menuOpcions();
-        System.out.println("Elige una opc: ");
-        int opc = Integer.parseInt(scanner.nextLine());
 
-        return opc;
+        int option = 0;
+        boolean ok = false;
+
+        do {
+            System.out.print("Introdueix la opció: ");
+            if (scanner.hasNextInt()) {
+                option = Integer.parseInt(scanner.nextLine());
+                ok = true;
+
+            } else {
+                System.out.println("Entrada invàlida. Heu d'introduir un nombre enter.");
+                scanner.next();
+            }
+        } while (!ok);
+
+        return option;
+
     }
 
     public Professor demanarDadesProfessor() {
+
         System.out.print("Introdueix el nom: ");
         String nom = scanner.nextLine();
 
@@ -29,14 +44,26 @@ public class ProfessorView {
     }
 
     public int idProfessor() {
-        System.out.print("Introdueix la ID del professor que vols eliminar:");
-        int option = Integer.parseInt(scanner.nextLine());
+        int option = 0;
+        boolean ok = false;
+
+        do {
+            System.out.print("Introdueix la ID del Professor que vols eliminar:");
+            if (scanner.hasNextInt()) {
+                option = scanner.nextInt();
+                ok = true;
+
+            } else {
+                System.out.println("Entrada invàlida. Heu d'introduir un nombre enter.");
+                scanner.next(); // descarta la entrada incorrecta
+            }
+        } while (!ok);
 
         return option;
     }
 
     public void mostrarLlistaProfessors(List<Professor> professors) {
-        System.out.println("Lista de Profesores:");
+        System.out.println("Llista de Professors:");
         for (Professor p : professors) {
             System.out.println(p.toString());
         }
@@ -47,18 +74,5 @@ public class ProfessorView {
         System.out.println("Id: " + prof.getId());
         System.out.println("Nom: " + prof.getNom());
         System.out.println("Cognom: " + prof.getCognom());
-    }
-
-    public Integer demanaId() {
-        int id = 0;
-        try {
-            System.out.println("Escribe una ID: ");
-            id = Integer.parseInt(scanner.nextLine());
-
-        } catch (Exception e) {
-            e.getMessage();
-        }
-        return id;
-
     }
 }

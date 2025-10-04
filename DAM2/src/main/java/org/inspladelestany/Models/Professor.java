@@ -33,6 +33,6 @@ public class Professor{
 
     @Override
     public String toString() {
-        return "[ " + "Id: " + id + " Nom: " + nom + "Cognom: " + cognom + " ]";
+        return "[ " + "Id: " + id + " Nom: " + nom + " Cognom: " + cognom + " ]";
     }
 }

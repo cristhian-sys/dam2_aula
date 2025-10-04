@@ -3,7 +3,7 @@ package org.inspladelestany.Models;
 public class ModulProfessional {
     private int id;
     private String nom;
-    private int id_professors;
+    private int id_professor;
 
     //Constructors
      /**
@@ -15,7 +15,7 @@ public class ModulProfessional {
     public ModulProfessional(int id, String nom, int id_professors) {
         this.id = id;
         this.nom = nom;
-        this.id_professors = id_professors;
+        this.id_professor = id_professors;
     }
 
     public ModulProfessional(String nom){
@@ -27,11 +27,11 @@ public class ModulProfessional {
     public void setId(int id) { this.id = id;}
     public String getNom() {return nom;}
     public void setNom(String nom) {this.nom = nom;}
-    public int getId_professors() {return id_professors;}
-    public void setId_professors(int id_professors) {this.id_professors = id_professors;}
+    public int getId_professor() {return id_professor;}
+    public void setId_professor(int id_professor) {this.id_professor = id_professor;}
 
     @Override
     public String toString() {
-        return "[ " + "Id: " + id + " Nom: " + nom + "IdProfessor: " + id_professors + " ]";
+        return "[ " + "Id: " + id + " Nom: " + nom + "IdProfessor: " + id_professor + " ]";
     }
 }

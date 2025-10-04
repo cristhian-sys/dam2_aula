@@ -1,11 +1,10 @@
 package org.inspladelestany.Utils;
 
-import java.util.Scanner;
-
 public class Menu {
 
     public void menuOpcions() {
         System.out.println("\n============MENU==============");
+        System.out.println("0 - Retorna");
         System.out.println("1 - Alta");
         System.out.println("2 - Llista");
         System.out.println("3 - Actualitzar");

@@ -17,11 +17,10 @@ public class ProfessorController {
 
     //Methods
     public void mostrarMenuProfessor(){
-        
-        int option = professorView.menuSecuOpc();
-
         boolean ok = false;
         do {
+            int option = professorView.menuSecuOpc();
+
             switch (option){
                 case 1:
                     altaProfessor();
@@ -39,6 +38,8 @@ public class ProfessorController {
                     eliminarProfessor();
                     ok = true;
                     break;
+                case 0:
+                    return;
 
                 default:
                     System.out.println("Opció no valida!");
