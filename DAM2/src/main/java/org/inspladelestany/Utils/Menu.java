@@ -11,7 +11,6 @@ public class Menu {
         System.out.println("3 - Actualitzar");
         System.out.println("4 - Eliminar");
         System.out.println("==============================");
-
     }
 
     public void menuPrincipal(){

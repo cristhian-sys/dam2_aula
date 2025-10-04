@@ -40,7 +40,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Menu Modul");
+                    modulController.mostrarMenuModul();
                     break;
 
                 case 0:

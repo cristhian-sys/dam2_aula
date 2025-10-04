@@ -1,7 +1,9 @@
 package org.inspladelestany.Controller;
 
 import org.inspladelestany.Dao.ModulProDAO;
+import org.inspladelestany.Models.ModulProfessional;
 import org.inspladelestany.Views.ModulView;
+import java.util.List;
 
 public class ModulController {
     private final ModulView modulView;
@@ -14,7 +16,7 @@ public class ModulController {
     }
 
     //Methods
-    public void mostrarMenuProfessor(){
+    public void mostrarMenuModul(){
 
         int option = modulView.menuSecuOpc();
 
@@ -46,16 +48,27 @@ public class ModulController {
 
     }
 
-    private void eliminarModul() {
-    }
+    private void altaModul() {
+        ModulProfessional m = modulView.demanarDadesModul();
 
-    private void editarModul() {
+        modulDAO.addDam2(m);
+        System.out.println("Modul creat correctament!");
     }
 
     private void llistarModul() {
+        List<ModulProfessional> moduls = modulDAO.readDam2();
+        modulView.mostrarLlistaModul(moduls);
     }
 
-    private void altaModul() {
+    private void editarModul() {
+        ModulProfessional m = modulView.demanarDadesModul();
+        modulDAO.updateDam2(m);
+    }
+
+    private void eliminarModul() {
+        int idModul = modulView.idModul();
+        modulDAO.deleteDam2(idModul);
+
     }
 }
 

@@ -1,6 +1,5 @@
 package org.inspladelestany.Views;
 
-import com.mysql.cj.conf.ConnectionPropertiesTransform;
 import org.inspladelestany.Models.Professor;
 import org.inspladelestany.Utils.Menu;
 import java.util.List;

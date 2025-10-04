@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfessorDAOImpl implements ProfessorDAO {
-    private static GestorConnexioBD gestorBD = new GestorConnexioBD();
+    private static final GestorConnexioBD gestorBD = new GestorConnexioBD();
 
     @Override
     public void addDam2(Professor professor) {

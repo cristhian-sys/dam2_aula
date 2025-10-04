@@ -1,8 +1,10 @@
 package org.inspladelestany.Views;
 
 import org.inspladelestany.Models.ModulProfessional;
+import org.inspladelestany.Models.Professor;
 import org.inspladelestany.Utils.Menu;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class ModulView {
@@ -22,6 +24,20 @@ public class ModulView {
         String nom = scanner.nextLine();
 
         return new ModulProfessional(nom);
+    }
+
+    public int idModul() {
+        System.out.print("Introdueix la ID del Modul Professional que vols eliminar:");
+        int option = Integer.parseInt(scanner.nextLine());
+
+        return option;
+    }
+
+    public void mostrarLlistaModul(List<ModulProfessional> modul) {
+        System.out.println("Lista de Profesores:");
+        for (ModulProfessional m : modul) {
+            System.out.println(m.toString());
+        }
     }
 
     public void mostrarDetallsModul(ModulProfessional modul){

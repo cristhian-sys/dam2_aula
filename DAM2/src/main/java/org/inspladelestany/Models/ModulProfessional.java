@@ -6,7 +6,7 @@ public class ModulProfessional {
     private int id_professors;
 
     //Constructors
-    /**
+     /**
      *
      * @param id del modul
      * @param nom del modul
@@ -29,4 +29,9 @@ public class ModulProfessional {
     public void setNom(String nom) {this.nom = nom;}
     public int getId_professors() {return id_professors;}
     public void setId_professors(int id_professors) {this.id_professors = id_professors;}
+
+    @Override
+    public String toString() {
+        return "[ " + "Id: " + id + " Nom: " + nom + "IdProfessor: " + id_professors + " ]";
+    }
 }
